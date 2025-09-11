@@ -23,7 +23,7 @@ function AnimatedScene() {
     setPlanes(planeArr);
 
     // Balloons
-    const balloonArr = Array.from({ length: 21 }).map((_, i) => ({
+    const balloonArr = Array.from({ length: 10 }).map((_, i) => ({
       id: i,
       left: getRandom(5, 80),
       speed: getRandom(15, 25),
