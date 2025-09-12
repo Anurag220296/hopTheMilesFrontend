@@ -1,0 +1,113 @@
+.vietnam-page {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+/* --- Hero --- */
+.vietnam-hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-flag {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* --- Collage --- */
+.vietnam-collage {
+  display: grid;
+  grid-template-areas:
+    "large small wide"
+    "large small tall";
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-rows: 200px;
+  gap: 15px;
+  margin-bottom: 3rem;
+}
+
+.collage-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.collage-item:hover {
+  transform: scale(1.05);
+}
+
+.collage-item.large  { grid-area: large; }
+.collage-item.small  { grid-area: small; }
+.collage-item.wide   { grid-area: wide; }
+.collage-item.tall   { grid-area: tall; }
+
+.collage-item span {
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* --- Info --- */
+.vietnam-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vietnam-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vietnam-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .vietnam-collage {
+    grid-template-areas:
+      "large"
+      "wide"
+      "tall"
+      "small";
+    grid-template-columns: 1fr;
+    grid-auto-rows: 180px;
+  }
+}

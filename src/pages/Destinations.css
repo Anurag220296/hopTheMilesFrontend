@@ -1,0 +1,59 @@
+.destinations {
+  padding: 100px 0;
+  background: #f9fafb;
+}
+
+.dest-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #333;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.dest-card {
+  position: relative;
+  height: 240px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.dest-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.dest-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.4s;
+}
+
+.dest-card:hover .dest-overlay {
+  background: rgba(0,0,0,0.55);
+}
+
+.dest-overlay h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

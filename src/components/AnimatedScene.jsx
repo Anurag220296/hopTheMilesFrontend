@@ -13,7 +13,7 @@ function AnimatedScene() {
   // Generate random objects
   useEffect(() => {
     // Planes
-    const planeArr = Array.from({ length: 5 }).map((_, i) => ({
+    const planeArr = Array.from({ length: 2 }).map((_, i) => ({
       id: i,
       top: getRandom(10, 50), // vertical position
       speed: getRandom(10, 25), // seconds to cross
@@ -23,7 +23,7 @@ function AnimatedScene() {
     setPlanes(planeArr);
 
     // Balloons
-    const balloonArr = Array.from({ length: 10 }).map((_, i) => ({
+    const balloonArr = Array.from({ length: 2 }).map((_, i) => ({
       id: i,
       left: getRandom(5, 80),
       speed: getRandom(15, 25),
@@ -32,7 +32,7 @@ function AnimatedScene() {
     setBalloons(balloonArr);
 
     // Cars
-    const carArr = Array.from({ length: 4 }).map((_, i) => ({
+    const carArr = Array.from({ length: 2 }).map((_, i) => ({
       id: i,
       bottom: getRandom(0, 20),
       speed: getRandom(8, 15),

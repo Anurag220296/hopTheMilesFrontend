@@ -43,7 +43,7 @@ function Navbar() {
         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
       </ul>
 
-        <AnimatedScene />
+        {/* <AnimatedScene /> */}
     </nav>
   );
 }

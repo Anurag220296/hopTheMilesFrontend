@@ -1,12 +1,14 @@
+import Destinations from "./Destinations";
 import Hero from "./Hero";
 import "./Home.css";
+import MasterBanner from "./MasterBanner";
 
 function Home() {
   return (
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
-        <Hero />
+        <MasterBanner />
         {/* <div className="hero-content">
           <h1>Hop The Miles ✈️</h1>
           <p>Your journey starts here. Discover flights, adventures, and more.</p>
@@ -15,6 +17,13 @@ function Home() {
             <button className="btn notify">Get Notified</button>
           </div>
         </div> */}
+      </section>
+      <section className="destination">
+        <Destinations />
+      </section>
+
+      <section className="hero">
+        <Hero />
       </section>
 
       {/* Highlights */}
@@ -43,6 +52,8 @@ function Home() {
         <p>Be the first to know when we launch. Exciting journeys await!</p>
         <button className="btn notify">Stay Updated</button>
       </section>
+
+
     </div>
   );
 }

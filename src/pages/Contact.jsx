@@ -15,7 +15,7 @@ export default function Contact() {
         {/* Postcard: Phone */}
         <div className="contact-card tilt-right">
           <h3>📞 Phone</h3>
-          <p>+91 9876543210</p>
+          <p>+91 99********</p>
         </div>
 
         {/* Postcard: Address */}
