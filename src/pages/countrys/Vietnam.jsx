@@ -1,10 +1,10 @@
 import "./Vietnam.css";
-import flag from "../assets/images/vietnam-flag.jpeg";
-import halong from "../assets/images/halong.jpg";
-import hanoi from "../assets/images/hanoi.jpg";
-import hoian from "../assets/images/hoian.jpg";
-import mekong from "../assets/images/mekong.jpeg";
-import saigon from "../assets/images/saigon.jpg";
+import flag from "../../assets/images/vietnam-flag.jpeg";
+import halong from "../../assets/images/halong.jpg";
+import hanoi from "../../assets/images/hanoi.jpg";
+import hoian from "../../assets/images/hoian.jpg";
+import mekong from "../../assets/images/mekong.jpeg";
+import saigon from "../../assets/images/saigon.jpg";
 
 export default function Vietnam() {
   return (

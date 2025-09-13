@@ -1,10 +1,10 @@
 import "./Indonesia.css";
-import flag from "../assets/images/indonesia-flag.jpeg";
-import bali from "../assets/images/bali.jpg";
-import borobudur from "../assets/images/borobudur.jpg";
-import komodo from "../assets/images/komodo.jpg";
-import rajaAmpat from "../assets/images/rajaAmpat.jpg";
-import jakarta from "../assets/images/jakarta.jpg";
+import flag from "../../assets/images/indonesia-flag.jpeg";
+import bali from "../../assets/images/bali.jpg";
+import borobudur from "../../assets/images/borobudur.jpg";
+import komodo from "../../assets/images/komodo.jpg";
+import rajaAmpat from "../../assets/images/rajaAmpat.jpg";
+import jakarta from "../../assets/images/jakarta.jpg";
 
 export default function Indonesia() {
   return (

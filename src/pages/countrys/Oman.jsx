@@ -1,10 +1,10 @@
 import "./Oman.css";
-import flag from "../assets/images/oman-flag.png";
-import muscat from "../assets/images/muscat.jpg";
-import wahiba from "../assets/images/wahiba.jpg";
-import nizwa from "../assets/images/nizwa.jpg";
-import jebel from "../assets/images/jebel.jpg";
-import salalah from "../assets/images/salalah.jpg";
+import flag from "../../assets/images/oman-flag.png";
+import muscat from "../../assets/images/muscat.jpg";
+import wahiba from "../../assets/images/wahiba.jpg";
+import nizwa from "../../assets/images/nizwa.jpg";
+import jebel from "../../assets/images/jebel.jpg";
+import salalah from "../../assets/images/salalah.jpg";
 
 export default function Oman() {
   return (

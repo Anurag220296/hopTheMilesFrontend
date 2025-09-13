@@ -1,10 +1,10 @@
 import "./Saudi.css";
-import flag from "../assets/images/saudi-flag.jpg";
-import riyadh from "../assets/images/riyadh.jpg";
-import jeddah from "../assets/images/jeddah.jpg";
-import madina from "../assets/images/madina.jpg";
-import desert from "../assets/images/desert.jpg";
-import alula from "../assets/images/alula.jpg";
+import flag from "../../assets/images/saudi-flag.jpg";
+import riyadh from "../../assets/images/riyadh.jpg";
+import jeddah from "../../assets/images/jeddah.jpg";
+import madina from "../../assets/images/madina.jpg";
+import desert from "../../assets/images/desert.jpg";
+import alula from "../../assets/images/alula.jpg";
 
 export default function Saudi() {
   return (

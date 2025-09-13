@@ -5,12 +5,13 @@ import App from "./App";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import India from "./pages/India";
-import Saudi from "./pages/Saudi";
-import Vietnam from "./pages/Vietnam";
-import Singapore from "./pages/Singapore";
-import Indonesia from "./pages/Indonesia";
-import Oman from "./pages/Oman";
+import India from "./pages/countrys/India";
+import Saudi from "./pages/countrys/Saudi";
+import Vietnam from "./pages/countrys/Vietnam";
+import Singapore from "./pages/countrys/Singapore";
+import Indonesia from "./pages/countrys/Indonesia";
+import Oman from "./pages/countrys/Oman";
+import Order from "./pages/Order";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="singapore" element={<Singapore />} />
         <Route path="oman" element={<Oman />} />
         <Route path="indonesia" element={<Indonesia />} />
+        <Route path="order" element={<Order />} />
 
       </Route>
     </Routes>

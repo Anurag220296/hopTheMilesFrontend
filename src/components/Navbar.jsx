@@ -41,6 +41,7 @@ function Navbar() {
         <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        <li><Link to="/order" onClick={() => setIsOpen(false)}>Booking</Link></li>
       </ul>
 
         {/* <AnimatedScene /> */}

@@ -1,10 +1,10 @@
 import "./India.css";
-import flag from "../assets/images/india-flag.jpg";
-import taj from "../assets/images/india.jpg";
-import himalaya from "../assets/images/himalaya.jpg";
-import mumbai from "../assets/images/mumbai.jpg";
-import kerala from "../assets/images/kerala.jpg";
-import desert from "../assets/images/desert.jpg";
+import flag from "../../assets/images/india-flag.jpg";
+import taj from "../../assets/images/india.jpg";
+import himalaya from "../../assets/images/himalaya.jpg";
+import mumbai from "../../assets/images/mumbai.jpg";
+import kerala from "../../assets/images/kerala.jpg";
+import desert from "../../assets/images/desert.jpg";
 
 export default function India() {
   return (

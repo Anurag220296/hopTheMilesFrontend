@@ -1,10 +1,10 @@
 import "./Singapore.css";
-import flag from "../assets/images/singapore-flag.png";
-import marina from "../assets/images/marina.jpg";
-import gardens from "../assets/images/garden.jpg";
-import sentosa from "../assets/images/sentosa.jpg";
-import chinatown from "../assets/images/chinatown.jpg";
-import merlion from "../assets/images/merlion.jpg";
+import flag from "../../assets/images/singapore-flag.png";
+import marina from "../../assets/images/marina.jpg";
+import gardens from "../../assets/images/garden.jpg";
+import sentosa from "../../assets/images/sentosa.jpg";
+import chinatown from "../../assets/images/chinatown.jpg";
+import merlion from "../../assets/images/merlion.jpg";
 
 export default function Singapore() {
   return (
