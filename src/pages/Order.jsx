@@ -173,7 +173,7 @@ export default function OrderForm() {
                   required
                 >
                   <option value="">Select Type</option>
-                  <option value="sharing">Sharing</option>
+                  <option value="shared">Sharing</option>
                   <option value="private">Private</option>
                 </select>
               </div>
