@@ -6,10 +6,23 @@ import Vietnam from "../assets/images/vietnam.jpg";
 import Singapore from "../assets/images/singapore.jpg";
 import Indonesia from "../assets/images/indonesia.jpg";
 import Oman from "../assets/images/oman.jpg";
+
 export default function OrderForm() {
   const [stops, setStops] = useState([
     { pickup: "", drop: "", datetime: "", type: "" },
   ]);
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    altPhone: "",
+  });
+
+  const handleFormChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
+  };
 
   const addStop = () => {
     setStops([...stops, { pickup: "", drop: "", datetime: "", type: "" }]);
@@ -21,34 +34,60 @@ export default function OrderForm() {
     setStops(updated);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      ...formData,
+      userId: null,
+      tripId: null,
+      paymentStatus: "pending",
+      orderStatus: "order_received",
+      stops: stops.map((s) => ({
+        pickupLocation: s.pickup,
+        dropLocation: s.drop,
+        rideType: s.type,
+        dateTime: new Date(s.datetime).toISOString(),
+      })),
+    };
+
+    try {
+      const res = await fetch(
+        "https://hop-the-miles-backend.vercel.app/api/bookings",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!res.ok) throw new Error("Failed to submit booking");
+
+      alert("✅ Booking submitted successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        altPhone: "",
+      });
+      setStops([{ pickup: "", drop: "", datetime: "", type: "" }]);
+    } catch (err) {
+      console.error(err);
+      alert("❌ Error submitting booking. Please try again.");
+    }
+  };
+
   return (
     <section className="order-section">
       {/* Background images */}
       <div className="background-images">
-        <img src={India} alt="" />
-        <img src={Saudi} alt="" />
-        <img src={Oman} alt="" />
-        <img src={Vietnam} alt="" />
-        <img src={Singapore} alt="" />
-        <img src={Indonesia} alt="" />
-        <img src={India} alt="" />
-        <img src={Saudi} alt="" />
-        <img src={Oman} alt="" />
-        <img src={Vietnam} alt="" />
-        <img src={Singapore} alt="" />
-        <img src={Indonesia} alt="" />
-        <img src={India} alt="" />
-        <img src={Saudi} alt="" />
-        <img src={Oman} alt="" />
-        <img src={Vietnam} alt="" />
-        <img src={Singapore} alt="" />
-        <img src={Indonesia} alt="" />
-        <img src={India} alt="" />
-        <img src={Saudi} alt="" />
-        <img src={Oman} alt="" />
-        <img src={Vietnam} alt="" />
-        <img src={Singapore} alt="" />
-        <img src={Indonesia} alt="" />
+        {[India, Saudi, Oman, Vietnam, Singapore, Indonesia,
+          India, Saudi, Oman, Vietnam, Singapore, Indonesia,
+          India, Saudi, Oman, Vietnam, Singapore, Indonesia,
+          India, Saudi, Oman, Vietnam, Singapore, Indonesia].map((img, i) => (
+          <img key={i} src={img} alt="" />
+        ))}
       </div>
 
       {/* Form */}
@@ -56,13 +95,42 @@ export default function OrderForm() {
         <h2>Book Your Ride</h2>
         <p>Fill in the details below to schedule your trip</p>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="tel" placeholder="Phone Number" required />
-            <input type="tel" placeholder="Alternative Phone Number" />
+            <input
+              type="text"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={(e) => handleFormChange("firstName", e.target.value)}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={(e) => handleFormChange("lastName", e.target.value)}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={(e) => handleFormChange("email", e.target.value)}
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Whatsapp Phone Number"
+              value={formData.phone}
+              onChange={(e) => handleFormChange("phone", e.target.value)}
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Alternative Phone Number"
+              value={formData.altPhone}
+              onChange={(e) => handleFormChange("altPhone", e.target.value)}
+            />
           </div>
 
           {stops.map((stop, i) => (
@@ -112,11 +180,7 @@ export default function OrderForm() {
             </div>
           ))}
 
-          <button
-            type="button"
-            className="add-stop"
-            onClick={addStop}
-          >
+          <button type="button" className="add-stop" onClick={addStop}>
             + Add Another Stop
           </button>
 

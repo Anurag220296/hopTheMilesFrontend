@@ -9,14 +9,6 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <MasterBanner />
-        {/* <div className="hero-content">
-          <h1>Hop The Miles ✈️</h1>
-          <p>Your journey starts here. Discover flights, adventures, and more.</p>
-          <div className="hero-buttons">
-            <button className="btn explore">Start Exploring</button>
-            <button className="btn notify">Get Notified</button>
-          </div>
-        </div> */}
       </section>
       <section className="destination">
         <Destinations />
