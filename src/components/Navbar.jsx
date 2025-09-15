@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
-import AnimatedScene from "./AnimatedScene";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [planePos, setPlanePos] = useState({ top: 10, left: 50 });
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
 
   // Move plane randomly every 2 seconds
   useEffect(() => {
@@ -16,6 +18,11 @@ function Navbar() {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
 
   return (
     <nav className="navbar">
@@ -42,9 +49,21 @@ function Navbar() {
         <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
         <li><Link to="/order" onClick={() => setIsOpen(false)}>Booking</Link></li>
-      </ul>
 
-        {/* <AnimatedScene /> */}
+        {/* Auth buttons */}
+        {isAuthenticated ? (
+          <>
+            <li className="user-name">{user?.first_name || "User"}</li>
+            <li>
+              <button onClick={handleLogout} className="logout-btn">
+                Logout
+              </button>
+            </li>
+          </>
+        ) : (
+          <li><Link to="/login" onClick={() => setIsOpen(false)}>Login</Link></li>
+        )}
+      </ul>
     </nav>
   );
 }

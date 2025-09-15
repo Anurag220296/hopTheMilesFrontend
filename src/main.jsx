@@ -12,24 +12,33 @@ import Singapore from "./pages/countrys/Singapore";
 import Indonesia from "./pages/countrys/Indonesia";
 import Oman from "./pages/countrys/Oman";
 import Order from "./pages/Order";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Forgotpassword from "./pages/ForgotPassword";
 import "./index.css";
+
+import { AuthProvider } from "./context/AuthContext"; // <-- new
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="india" element={<India />} />
-        <Route path="saudi" element={<Saudi />} />
-        <Route path="vietnam" element={<Vietnam />} />
-        <Route path="singapore" element={<Singapore />} />
-        <Route path="oman" element={<Oman />} />
-        <Route path="indonesia" element={<Indonesia />} />
-        <Route path="order" element={<Order />} />
-
-      </Route>
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="india" element={<India />} />
+          <Route path="saudi" element={<Saudi />} />
+          <Route path="vietnam" element={<Vietnam />} />
+          <Route path="singapore" element={<Singapore />} />
+          <Route path="oman" element={<Oman />} />
+          <Route path="indonesia" element={<Indonesia />} />
+          <Route path="order" element={<Order />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="forgotpassword" element={<Forgotpassword />} />
+        </Route>
+      </Routes>
+    </AuthProvider>
   </BrowserRouter>
 );

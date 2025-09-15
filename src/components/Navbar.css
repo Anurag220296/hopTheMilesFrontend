@@ -117,3 +117,8 @@
     margin: 0.5rem 0;
   }
 }
+.user-name {
+  color: #fff;
+  font-weight: 500;
+  margin-right: 1rem;
+}

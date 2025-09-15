@@ -21,6 +21,7 @@ function Footer() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/order">Booking</Link>
         </nav>
 
         <div className="footer-right">

@@ -1,0 +1,106 @@
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  background: url("../assets/images/desert.jpg") center/cover no-repeat;
+  backdrop-filter: blur(3px);
+}
+
+/* Optional: overlay to darken background for better contrast */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.auth-left,
+.auth-right {
+  position: relative;
+  z-index: 1; /* keep content above overlay */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  color: #fff;
+}
+
+/* rest of your existing Auth.css stays the same */
+
+
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #0f172a, #1ddafe);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.auth-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.auth-left p {
+  font-size: 1.2rem;
+  max-width: 300px;
+}
+
+.auth-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.auth-right h2 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 1rem;
+  border: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.auth-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.auth-link a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: 500;
+}

@@ -127,10 +127,6 @@ function Home() {
         </p>
 
         <div className="routes-grid">
-          <div className="route-card">
-            <h3>Delhi → Agra</h3>
-            <p>Experience the beauty of the Taj Mahal and Mughal history.</p>
-          </div>
 
           <div className="route-card">
             <h3>Mumbai → Goa</h3>
@@ -143,9 +139,40 @@ function Home() {
           </div>
 
           <div className="route-card">
-            <h3>Singapore → Vietnam</h3>
-            <p>Discover the exotic charm of Southeast Asia in style.</p>
+            <h3>Singapore Airport → Marina Bay</h3>
+            <p>Swift transfers from runway to the city’s shining heart.</p>
           </div>
+
+          <div className="route-card">
+            <h3>Ubud → Seminyak</h3>
+            <p>Relaxing ride from Bali’s cultural core to its beachside charm.</p>
+          </div>
+
+          <div className="route-card">
+            <h3>Dubai Airport → Downtown Dubai</h3>
+            <p>Luxury ride straight to the iconic Burj Khalifa district.</p>
+          </div>
+
+          <div className="route-card">
+            <h3>Hanoi → Ha Long Bay</h3>
+            <p>Scenic journey from bustling streets to tranquil waters.</p>
+          </div>
+
+          <div className="route-card">
+            <h3>Jakarta → Bandung</h3>
+            <p>Escape city rush to West Java’s cool mountain vibes.</p>
+          </div>
+
+          <div className="route-card">
+            <h3>Da Nang → Hoi An</h3>
+            <p>Short, scenic coastal route to Vietnam’s lantern town.</p>
+          </div>
+
+          <div className="route-card">
+            <h3>Abu Dhabi → Dubai</h3>
+            <p>Comfortable desert highway ride between UAE’s gems.</p>
+          </div>
+
         </div>
       </section>
 
