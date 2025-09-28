@@ -15,6 +15,7 @@ import Order from "./pages/Order";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Forgotpassword from "./pages/ForgotPassword";
+import SpinWheel from "./pages/SpinWheel";
 import "./index.css";
 
 import { AuthProvider } from "./context/AuthContext"; // <-- new
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="forgotpassword" element={<Forgotpassword />} />
+          <Route path="wheel" element={<SpinWheel />} />
         </Route>
       </Routes>
     </AuthProvider>

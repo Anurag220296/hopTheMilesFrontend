@@ -2,6 +2,7 @@ import Destinations from "./Destinations";
 import Hero from "./Hero";
 import "./Home.css";
 import MasterBanner from "./MasterBanner";
+import SpinWheel from "./SpinWheel";
 import india from '../assets/images/india.jpg';
 
 function Home() {
@@ -182,7 +183,7 @@ function Home() {
       </section>
 
       {/* Highlights */}
-      <section className="highlights">
+      {/* <section className="highlights">
         <div className="card">
           <h3>✈️ Flights</h3>
           <p>Find the best routes and fares for your next trip.</p>
@@ -199,7 +200,12 @@ function Home() {
           <h3>🌍 Adventures</h3>
           <p>Experience unique activities wherever you go.</p>
         </div>
-      </section>
+      </section> */}
+
+      {/* WHEEL */}
+      {/* <section className="wheel">
+        <SpinWheel />
+      </section> */}
 
       {/* CTA */}
       <section className="cta">

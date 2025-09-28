@@ -9,7 +9,7 @@ export default function Contact() {
         {/* Postcard: Email */}
         <div className="contact-card tilt-left">
           <h3>📧 Email</h3>
-          <p>hello@hopthemiles.com</p>
+          <p>info@hopthemiles.com</p>
         </div>
 
         {/* Postcard: Phone */}

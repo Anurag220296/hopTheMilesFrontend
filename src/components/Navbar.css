@@ -122,3 +122,9 @@
   font-weight: 500;
   margin-right: 1rem;
 }
+.navbar-logo {
+  width: 40px;       /* adjust size as needed */
+  height: 40px;
+  margin-right: 8px; /* space between logo and text */
+  object-fit: contain;
+}

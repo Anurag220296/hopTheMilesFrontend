@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
-
+import logo from "../assets/images/logo.jpeg";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [planePos, setPlanePos] = useState({ top: 10, left: 50 });
@@ -28,7 +28,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Brand (Logo → Home) */}
       <Link to="/" className="navbar-brand" onClick={() => setIsOpen(false)}>
-        <span className="badge">✈️</span>
+        <img src={logo} alt="Hop The Miles Logo" className="navbar-logo" />
         <h1>
           Hop <span className="highlight">The Miles</span>
         </h1>
@@ -49,6 +49,7 @@ function Navbar() {
         <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
         <li><Link to="/order" onClick={() => setIsOpen(false)}>Booking</Link></li>
+        <li><Link to="/wheel" onClick={() => setIsOpen(false)}>Spin Wheel</Link></li>
 
         {/* Auth buttons */}
         {isAuthenticated ? (

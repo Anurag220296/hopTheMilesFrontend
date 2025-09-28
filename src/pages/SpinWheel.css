@@ -1,0 +1,108 @@
+.spin-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin: 36px auto;
+  max-width: 1100px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.wheel-section {
+  text-align: center;
+}
+
+.spin-title {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #1a2a4f;
+}
+
+.wheel-visual {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+}
+
+.wheel-svg {
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.03), transparent 30%),
+    #0f1724;
+  box-shadow: 0 18px 40px rgba(10, 10, 10, 0.25), inset 0 6px 18px rgba(255, 255, 255, 0.02);
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #ff4b4b;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.spin-btn {
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.14s ease;
+}
+.spin-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.spin-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+/* Result section on right */
+.result-section {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-section .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.result-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.go-btn {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.go-btn:hover {
+  background: #e68900;
+}
